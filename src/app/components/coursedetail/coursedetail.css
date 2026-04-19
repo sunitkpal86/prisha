@@ -1,0 +1,25 @@
+.prereq-container {
+  max-width: 760px;
+  margin: 0 auto 16px;
+  padding: 12px 16px;
+  border: 1px solid #e6edf3;
+  background: #fbfcfe;
+  border-radius: 8px;
+}
+
+.prereq-title {
+  margin: 0 0 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.prereq-list {
+  margin: 0;
+  padding-left: 18px;
+  color: #334155;
+}
+
+.prereq-item {
+  margin: 4px 0;
+}

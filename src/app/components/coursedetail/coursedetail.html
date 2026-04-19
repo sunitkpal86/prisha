@@ -1,0 +1,76 @@
+<div class="max-w-5xl mx-auto pt-10 pb-10">
+
+  <div class="mb-10">
+    <button (click)="goBack()"
+      class="group inline-flex items-center gap-3 px-5 py-2.5 bg-[#f22a43] hover:bg-[#f22a43] text-white rounded-lg transition-all duration-300 shadow-md hover:shadow-xl active:scale-95">
+      <svg class="w-5 h-5 transform group-hover:-translate-x-1 transition-transform duration-200" fill="none"
+        viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+      </svg>
+      <span class="font-medium tracking-wide">Back</span>
+    </button>
+  </div>
+
+  <div class="bg-[#FDF8F5] border-l-4 border-[#f22a43] p-6 mb-10 rounded-r-xl shadow-sm">
+    <div class="flex flex-col gap-1">
+      <h1 class="text-xl md:text-2xl text-slate-600 tracking-tight">
+        {{ courseData()?.title }} Course Content
+      </h1>
+    </div>
+  </div>
+
+  <div class="flex items-center gap-3 mb-6">
+    <div class="w-1 h-8 bg-[#f22a43] rounded-full"></div>
+    <h2 class="text-2xl text-slate-600">Pre-requisites</h2>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    @for (item of prerequisites(); track item) {
+    <div
+      class="group flex items-start p-5 bg-white border border-slate-200 rounded-xl shadow-sm hover:border-orange-200 hover:shadow-md transition-all">
+      <div
+        class="shrink-0 w-8 h-8 flex items-center justify-center rounded-full bg-orange-50 text-orange-600 group-hover:bg-[#6F4E37] group-hover:text-white transition-colors">
+        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+        </svg>
+      </div>
+      <div class="ml-4">
+        <p class="text-slate-700 font-medium leading-relaxed">{{ item }}</p>
+      </div>
+    </div>
+    }
+  </div>
+</div>
+
+<div class="max-w-5xl mx-auto mt-3 mb-10 space-y-3">
+
+  @for (section of courseData()?.content; track section.title; let i = $index) {
+  <div class="border border-slate-200 overflow-hidden bg-white shadow-sm">
+    <button (click)="toggle(i)"
+      class="w-full flex justify-between items-center p-5 text-left hover:bg-slate-50 transition-all duration-200 border-l-4 border-[#f22a43]"
+      [attr.aria-expanded]="openIndex() === i">
+      <span class="text-lg text-slate-800">{{ section.title }}</span>
+
+      <svg class="w-5 h-5 text-orange-600 transition-transform duration-300" [class.rotate-180]="openIndex() === i"
+        fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+      </svg>
+    </button>
+
+    <div class="transition-[max-height,opacity] duration-500 ease-in-out overflow-hidden"
+      [class.max-h-0]="openIndex() !== i" [class.max-h-96]="openIndex() === i" [class.opacity-0]="openIndex() !== i"
+      [class.opacity-100]="openIndex() === i">
+      <div class="p-5 pt-0 bg-slate-50/50">
+        <ul class="space-y-3 border-t border-slate-100 pt-4">
+          @for (topic of section.topics; track topic) {
+          <li class="flex items-center text-slate-600">
+            <span class="w-2 h-2 bg-orange-500 rounded-full mr-3 shadow-[0_0_8px_rgba(249,115,22,0.4)]"></span>
+            {{ topic }}
+          </li>
+          }
+        </ul>
+      </div>
+    </div>
+  </div>
+  }
+</div>

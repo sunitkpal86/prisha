@@ -1,0 +1,310 @@
+/* Layout Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+
+
+
+
+/* Buttons */
+button {
+  padding: 12px 30px;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  border: none;
+  margin: 0 10px;
+}
+
+.btn-primary { background: #ffcc00; color: #0c1b4a; }
+.btn-primary:hover { background: #e6b800; transform: translateY(-2px); }
+
+.btn-secondary { background: rgba(255,255,255,0.1); color: white; border: 1px solid white; }
+.btn-secondary:hover { background: white; color: #0c1b4a; }
+
+/* Course Grid */
+.courses { padding: 80px 0; background: #f9fafb; }
+.section-title { text-align: center; margin-bottom: 50px; color: #333; }
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.course-card:hover { transform: translateY(-10px); }
+
+.course-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Ensures all cards in the row are equal height */
+  padding: 30px;
+  background: white;
+  border-radius: 15px;
+  border: 1px solid #e0e0e0;
+}
+
+.course-content {
+  flex-grow: 1; /* This pushes the content to take all available space */
+}
+
+.course-action {
+  margin-top: auto; /* Pins the link to the very bottom of the card */
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #ff8c00; /* Match your orange/yellow accent */
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.course-action .arrow {
+  transition: transform 0.3s ease;
+}
+
+.course-card:hover .arrow {
+  transform: translateX(5px); /* Smooth nudge on hover */
+}
+
+
+.angular { background: #dd0031; }
+.react { background: #61dafb; color: #222; }
+.dotnet { background: #512bd4; }
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid #0c1b4a;
+  color: #0c1b4a;
+  margin-top: 20px;
+}
+
+.hero-light {
+  padding: 120px 0 80px;
+  background-color: #ffffff;
+  /* Subtle mesh gradient background for a premium feel */
+  background-image: 
+    radial-gradient(at 0% 0%, hsla(210,100%,95%,1) 0, transparent 50%), 
+    radial-gradient(at 100% 100%, hsla(45,100%,92%,1) 0, transparent 50%);
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.badge {
+  background: #eef2ff;
+  color: #4f46e5;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 24px;
+}
+
+.hero-light h1 {
+  font-size: 3.5rem;
+  color: #111827;
+  line-height: 1.1;
+  margin-bottom: 24px;
+}
+
+/* Highlight "Industry-Ready" with your brand color */
+.hero-light h1 span {
+  color: #0c1b4a; /* Your navy blue */
+  position: relative;
+}
+
+.hero-light p {
+  font-size: 1.25rem;
+  color: #4b5563;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+/* Buttons */
+.btn-primary {
+  background: #0c1b4a;
+  color: white;
+  padding: 16px 32px;
+  font-size: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(12, 27, 74, 0.2);
+}
+
+.btn-outline-dark {
+  background: transparent;
+  border: 1px solid #d1d5db;
+  color: #374151;
+  padding: 16px 32px;
+  font-size: 1rem;
+  border-radius: 8px;
+}
+
+.btn-outline-dark:hover {
+  background: #f9fafb;
+}
+
+/* Stats Row */
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 60px;
+  padding-top: 40px;
+  border-top: 1px solid #f3f4f6;
+}
+
+.stat {
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+.stat strong {
+  color: #111827;
+  display: block;
+  font-size: 1.5rem;
+}
+
+/* Features Section */
+.features {
+  padding: 100px 0;
+  background-color: #ffffff;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.sub-title {
+  color: #4f46e5;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.85rem;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+.feature-item {
+  padding: 20px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.feat-icon {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.feature-item h4 {
+  font-size: 1.25rem;
+  color: #111827;
+  margin-bottom: 12px;
+}
+
+.feature-item p {
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+/* CTA Banner Section */
+.cta-banner {
+  padding: 60px 0 100px;
+}
+
+.cta-card {
+  background: linear-gradient(135deg, #0c1b4a 0%, #1e3a8a 100%);
+  border-radius: 24px;
+  padding: 60px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 20px 40px rgba(12, 27, 74, 0.15);
+}
+
+.cta-card h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.cta-card p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin-bottom: 30px;
+}
+
+.btn-primary-large {
+  background: #ffcc00;
+  color: #0c1b4a;
+  padding: 18px 40px;
+  border-radius: 12px;
+  font-weight: 800;
+  font-size: 1.1rem;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.btn-primary-large:hover {
+  transform: scale(1.05);
+  background: #f5c200;
+}
+
+.course-action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #0c1b4a;
+}
+
+/* The Circle */
+.arrow-circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1.5px solid #0c1b4a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* Smoother animation */
+}
+
+/* The SVG Arrow */
+.arrow-circle svg {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.3s ease;
+}
+
+/* HOVER EFFECT: The "Premium" Look */
+.course-card:hover .arrow-circle {
+  background-color: #0c1b4a; /* Circle fills with navy */
+  color: #ffffff;            /* Arrow turns white */
+  transform: scale(1.1);     /* Circle grows slightly */
+}
+
+.course-card:hover .arrow-circle svg {
+  transform: translateX(3px); /* Arrow nudges right */
+}
+
+.course-card:hover span {
+  color: #0c1b4a;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}

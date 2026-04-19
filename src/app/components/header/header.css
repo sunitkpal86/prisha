@@ -1,0 +1,166 @@
+.header-main {
+  position: sticky;
+  background: #0F172A; 
+}
+
+/* container keeps layout consistent */
+.header-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 12px 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Logo section - no separate backing so logo blends with header strip */
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  flex-shrink: 0;
+  padding: 0;               /* remove extra box padding */
+  border-radius: 0;
+  background: transparent;
+}
+
+.logo-img {
+  height: 56px; /* tweak +/− to match pixel-perfect */
+  width: auto;
+  display: block;
+  filter: none;
+}
+
+/* Two-line brand text */
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.brand-first {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  color: gainsboro;
+  letter-spacing: 0.2px;
+  text-transform: none;
+}
+
+.brand-second {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  color: #ff9800;
+  letter-spacing: 4px;
+  margin-top: 2px;
+}
+
+.nav-menu {
+display: flex;
+gap: 36px;
+align-items: center;
+margin: 0;
+padding: 0;
+flex: 0 0 auto; 
+}
+
+.nav-menu a {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  color: #ffffff;
+  letter-spacing: 1px;
+  padding: 8px 0;
+  border-bottom: 3px solid transparent;
+}
+
+.nav-menu a:hover {
+  color: #ff9800;
+  border-bottom-color: #ff9800;
+}
+
+/* Contact button */
+.contact-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg,#ff9800,#ff7a00);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 28px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-decoration: none;
+  box-shadow: 0 6px 18px rgba(255,152,0,0.18);
+  transition: transform .12s, box-shadow .12s;
+}
+
+.contact-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(255,152,0,0.22);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .nav-menu { display: none; } /* mobile menu can be added later */
+  .logo-img { height: 48px; }
+  .brand-first { font-size: 20px; }
+  .brand-second { font-size: 9px; letter-spacing: 3px; }
+}
+
+/* .......................*/
+.top-contactbar {
+  background: #7394f1; /* rich blue */
+  color: #fff;
+  font-size: 13px;
+  line-height: 36px;
+  width: 100%;
+}
+
+.top-contactbar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4px 5px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+
+.contact-item, .hr-contact {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.phone {
+  font-weight: 600;
+}
+
+.divider {
+  opacity: 0.25;
+  margin: 0 6px;
+  user-select: none;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+/* Small screens: compress and stack if needed */
+@media (max-width: 680px) {
+  .top-contactbar-inner {
+    gap: 8px;
+    font-size: 12px;
+  }
+  .hr-contact {
+    margin-left: 8px;
+    white-space: nowrap;
+  }
+}

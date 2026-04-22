@@ -14,15 +14,15 @@ export const CourseList: Course[] = [
   },
   {
     id: 102,
-    image: 'assets/images/azure.png',
-    name: 'Azure Data Engineering',
-    description: 'Build scalable data solutions using Data Factory, Synapse and Databricks.',
+    image: 'assets/images/azuredevops.png',
+    name: 'Azure Devops',
+    description: 'Azure DevOps is an all-in-one collaboration platform that provides end-to-end tools to manage the entire software development lifecycle. It enables teams to plan work, develop code, and deliver applications faster through integrated cloud services.',
   },
   {
     id: 103,
     image: 'assets/images/react.png',
     name: 'React',
-    description: 'Modern Hooks, Redux Toolkit, and Next.js integration.',
+    description: 'React is a powerful, component-based JavaScript library used for building fast and interactive user interfaces. Maintained by Meta, it focuses on the "view" layer of applications, making it the industry standard for modern web development.',
   },
   {
     id: 104,

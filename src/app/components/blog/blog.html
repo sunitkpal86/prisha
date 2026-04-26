@@ -1,93 +1,105 @@
-<section class="bg-gray-50 py-16 px-6 lg:px-20">
-  <div class="max-w-7xl mx-auto">
+<section class="relative py-24 px-6 bg-[#fdfbf9] overflow-hidden">
+  
+  <div class="flex flex-col items-center text-center mb-20">
+    <div class="w-24 h-px bg-gradient-to-r from-transparent via-[#6b4e3d]/40 to-transparent mb-8"></div>
     
-    <div class="mb-12">
-      <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Knowledge Base</h2>
-      <p class="text-gray-600 mt-2">Master deep-dive concepts through our curated technology blogs.</p>
+    <div class="inline-flex items-center gap-2 px-3 py-1 mb-8 rounded-full bg-[#6b4e3d]/5 border border-[#6b4e3d]/10">
+      <span class="text-[10px] font-bold tracking-[0.3em] text-[#6b4e3d] uppercase">Knowledge Base</span>
+    </div>
+    
+    <h1 class="text-5xl md:text-8xl font-black text-gray-900 leading-[0.95] tracking-tighter mb-8">
+      Master the <br/> 
+      <span class="text-[#6b4e3d]">Practical.</span>
+    </h1>
+    <p class="text-xl text-gray-500 max-w-2xl font-medium">
+      Deep-dive technical guides architected to move you from syntax theory to production-ready implementation.
+    </p>
+  </div>
+
+  <div class="max-w-7xl mx-auto">
+    <div class="flex flex-wrap justify-center gap-4 mb-16">
+      <button class="px-6 py-2 rounded-full bg-gray-900 text-white text-xs font-bold uppercase tracking-widest">All Guides</button>
+      <button class="px-6 py-2 rounded-full bg-white border border-gray-200 text-gray-500 text-xs font-bold uppercase tracking-widest hover:border-[#6b4e3d] transition-all">Angular</button>
+      <button class="px-6 py-2 rounded-full bg-white border border-gray-200 text-gray-500 text-xs font-bold uppercase tracking-widest hover:border-[#6b4e3d] transition-all">.NET Core</button>
+      <button class="px-6 py-2 rounded-full bg-white border border-gray-200 text-gray-500 text-xs font-bold uppercase tracking-widest hover:border-[#6b4e3d] transition-all">Azure DevOps</button>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       
-      <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-        <div class="flex items-center gap-4 mb-6">
-          <div class="p-3 rounded-lg">
-            <img src="assets/images/Angular21.jpg" class="w-15 h-15" alt="Angular">
+      <article class="group relative bg-white rounded-[2.5rem] border border-gray-100 p-8 shadow-sm hover:shadow-2xl transition-all duration-500 flex flex-col justify-between">
+        <div>
+          <div class="flex justify-between items-start mb-6">
+            <span class="px-3 py-1 bg-green-50 text-green-600 text-[10px] font-black rounded-lg uppercase tracking-widest">Lab-Tested</span>
+            <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">12 min read</span>
           </div>
-          <h3 class="text-xl font-bold text-gray-800">Angular</h3>
+          
+          <h3 class="text-2xl font-black text-gray-900 leading-tight mb-4 group-hover:text-[#6b4e3d] transition-colors">
+            Implementing Signal-Based State Management in Angular 21
+          </h3>
+          
+          <p class="text-gray-500 text-sm leading-relaxed mb-6">
+            Stop using heavy Observables for simple state. Learn to architect a "Zero-Boilerplate" store using native Signals and Effects.
+          </p>
+
+          <div class="flex flex-wrap gap-2 mb-8">
+            <span class="px-2 py-1 bg-[#fdfbf9] border border-gray-100 rounded text-[9px] font-mono text-gray-500">#Angular21</span>
+            <span class="px-2 py-1 bg-[#fdfbf9] border border-gray-100 rounded text-[9px] font-mono text-gray-500">#Signals</span>
+            <span class="px-2 py-1 bg-[#fdfbf9] border border-gray-100 rounded text-[9px] font-mono text-gray-500">#State</span>
+          </div>
         </div>
 
-        <ul class="space-y-4">
-          <li>
-            <a href="/blog/angular/data-binding" class="flex justify-between items-center group text-gray-600 hover:text-blue-600">
-              <span>Data Binding</span>
-              <span class="text-xs font-semibold bg-blue-50 text-blue-600 px-2.5 py-1 rounded-full group-hover:bg-blue-600 group-hover:text-white transition-colors">12 Posts</span>
-            </a>
-          </li>
-          <li>
-            <a href="/blog/angular/signals" class="flex justify-between items-center group text-gray-600 hover:text-blue-600">
-              <span>Signals & State</span>
-              <span class="text-xs font-semibold bg-green-50 text-green-600 px-2.5 py-1 rounded-full">New</span>
-            </a>
-          </li>
-          <li>
-            <a href="/blog/angular/directives" class="block text-gray-600 hover:text-blue-600">Directives</a>
-          </li>
-        </ul>
-
-        <a href="/blog/angular" class="mt-8 block text-center py-2 px-4 rounded-lg bg-gray-50 text-blue-600 font-semibold hover:bg-blue-600 hover:text-white transition-all">
-          Explore Angular →
+        <a href="#" class="inline-flex items-center gap-2 text-xs font-black text-gray-900 uppercase tracking-widest group-hover:gap-4 transition-all">
+          Build the project <span class="text-[#6b4e3d]">→</span>
         </a>
-      </div>
+      </article>
 
-      <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-        <div class="flex items-center gap-4 mb-6">
-          <div class="p-3 bg-purple-50 rounded-lg">
-            <img src="assets/images/dotnet-icon.svg" class="w-8 h-8" alt=".NET">
+      <article class="group relative bg-white rounded-[2.5rem] border border-gray-100 p-8 shadow-sm hover:shadow-2xl transition-all duration-500 flex flex-col justify-between">
+        <div>
+          <div class="flex justify-between items-start mb-6">
+            <span class="px-3 py-1 bg-blue-50 text-blue-600 text-[10px] font-black rounded-lg uppercase tracking-widest">Architecture</span>
+            <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">18 min read</span>
           </div>
-          <h3 class="text-xl font-bold text-gray-800">.NET Core</h3>
+          
+          <h3 class="text-2xl font-black text-gray-900 leading-tight mb-4 group-hover:text-[#6b4e3d] transition-colors">
+            Building Scalable Microservices with .NET 9 & Docker
+          </h3>
+          
+          <p class="text-gray-500 text-sm leading-relaxed mb-6">
+            A practical guide to containerizing ASP.NET Web APIs and implementing inter-service communication via RabbitMQ.
+          </p>
+
+          <div class="flex flex-wrap gap-2 mb-8">
+            <span class="px-2 py-1 bg-[#fdfbf9] border border-gray-100 rounded text-[9px] font-mono text-gray-500">#DotNet9</span>
+            <span class="px-2 py-1 bg-[#fdfbf9] border border-gray-100 rounded text-[9px] font-mono text-gray-500">#Docker</span>
+          </div>
         </div>
 
-        <ul class="space-y-4">
-          <li>
-            <a href="/blog/dotnet/web-api" class="block text-gray-600 hover:text-blue-600">ASP.NET Web API</a>
-          </li>
-          <li>
-            <a href="/blog/dotnet/ef-core" class="block text-gray-600 hover:text-blue-600">Entity Framework Core</a>
-          </li>
-          <li>
-            <a href="/blog/dotnet/linq" class="block text-gray-600 hover:text-blue-600">LINQ Mastery</a>
-          </li>
-        </ul>
-
-        <a href="/blog/dotnet" class="mt-8 block text-center py-2 px-4 rounded-lg bg-gray-50 text-blue-600 font-semibold hover:bg-blue-600 hover:text-white transition-all">
-          Explore .NET →
+        <a href="#" class="inline-flex items-center gap-2 text-xs font-black text-gray-900 uppercase tracking-widest group-hover:gap-4 transition-all">
+          Deploy to Prod <span class="text-[#6b4e3d]">→</span>
         </a>
-      </div>
+      </article>
 
-      <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-        <div class="flex items-center gap-4 mb-6">
-          <div class="p-3 bg-blue-50 rounded-lg">
-            <img src="assets/images/azure-icon.svg" class="w-8 h-8" alt="Azure">
+      <article class="group relative bg-[#6b4e3d] rounded-[2.5rem] p-8 shadow-2xl transition-all duration-500 flex flex-col justify-between overflow-hidden">
+        <div class="absolute -top-10 -right-10 w-40 h-40 bg-white/5 rounded-full blur-3xl"></div>
+        <div class="relative z-10">
+          <div class="flex justify-between items-start mb-6">
+            <span class="px-3 py-1 bg-white/10 text-white text-[10px] font-black rounded-lg uppercase tracking-widest">DevOps</span>
+            <span class="text-[10px] font-bold text-white/50 uppercase tracking-widest">25 min read</span>
           </div>
-          <h3 class="text-xl font-bold text-gray-800">Azure DevOps</h3>
+          
+          <h3 class="text-2xl font-black text-white leading-tight mb-4">
+            The Zero-Downtime Pipeline: Azure DevOps & GitHub Actions
+          </h3>
+          
+          <p class="text-white/70 text-sm leading-relaxed mb-6">
+            Master the art of CI/CD. Learn to configure blue-green deployments for enterprise-scale Azure environments.
+          </p>
         </div>
 
-        <ul class="space-y-4">
-          <li>
-            <a href="/blog/azure/ci-cd" class="block text-gray-600 hover:text-blue-600">CI/CD Pipelines</a>
-          </li>
-          <li>
-            <a href="/blog/azure/repos" class="block text-gray-600 hover:text-blue-600">Azure Repos & Branching</a>
-          </li>
-          <li>
-            <a href="/blog/azure/docker" class="block text-gray-600 hover:text-blue-600">Containerization</a>
-          </li>
-        </ul>
-
-        <a href="/blog/azure" class="mt-8 block text-center py-2 px-4 rounded-lg bg-gray-50 text-blue-600 font-semibold hover:bg-blue-600 hover:text-white transition-all">
-          Explore DevOps →
+        <a href="#" class="relative z-10 inline-flex items-center gap-2 text-xs font-black text-white uppercase tracking-widest hover:gap-4 transition-all">
+          Explore Pipeline <span class="text-white/60">→</span>
         </a>
-      </div>
+      </article>
 
     </div>
   </div>
